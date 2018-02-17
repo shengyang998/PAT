@@ -46,7 +46,7 @@ int main(){
       if(Tree[i] == -1)
         ans++;
     }
-    print("%d\n", ans-1)
+    printf("%d\n", ans - 1);
   }
   return 0;
 }
