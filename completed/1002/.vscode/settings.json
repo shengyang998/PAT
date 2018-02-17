@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.gyb": "swift",
+        "vector": "cpp",
+        "array": "cpp",
+        "__bit_reference": "cpp",
+        "algorithm": "cpp",
+        "string": "cpp"
+    }
+}

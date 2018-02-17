@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.gyb": "swift",
+        "__split_buffer": "cpp",
+        "vector": "cpp"
+    }
+}
