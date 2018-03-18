@@ -15,11 +15,11 @@ int main(){
   int de_city;
   for(int i=0; i<k; i++){
     scanf("%d", &de_city);
-    int pool[100]
-    for (int j=0; j<n+1; j++){
-      for (int g=0; g<n+1; g++){
-        roads[j][g]
-      }
+    int pool[100];
+    for (int j = 0; j < n + 1; j++) {
+        for (int g = 0; g < n + 1; g++) {
+            roads[j][g];
+        }
     }
   }
   return 0;

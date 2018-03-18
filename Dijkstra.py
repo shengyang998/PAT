@@ -22,7 +22,7 @@ def get_result(target, prev):
     S = deque()
     # print("prev[A]: {0}".format(prev['A']))
     S.appendleft(target)
-    while prev.get(target) != None:
+    while prev.get(target) != None: # if target in prev.keys():
         # print("prev[{0}]: {1}".format(target, prev[target]))
         S.appendleft(prev[target])
         target = prev[target]
@@ -35,14 +35,16 @@ def get_d_prev(graph, source):
     dist = {}
     prev = {}
     Q_list = {}
+    # initial stage
     for i in graph:
-        Q_list[i] = Inf     # 所有节点（Inf 是未访问节点）
+        Q_list[i] = Inf     # 初始化所有节点（Inf 是未访问节点）
         dist[i] = Inf       # v 节点到起点的距离
         prev[i] = undef     # v 节点的前接节点
-        for v in graph[i]:         # 初始化
-            dist[v] = Inf       # v 节点到起点的距离
-            prev[v] = undef     # v 节点的前接节点
+        for v in graph[i]:  # 此处为对应 dict 数据结构的妥协，比如说 'F' 就不在 i 中
+            dist[v] = Inf
+            prev[v] = undef
     dist[source] = 0        # 初始节点置零
+    # start calculating stage
     while Q_list:
         u = min(dist, key=dist.get)
         Q_list.pop(u)       # get min of Q 访问一个未访问的节点
